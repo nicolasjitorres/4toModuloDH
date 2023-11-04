@@ -17,6 +17,226 @@ Descripciones: 16px
 
 */
 
-*{
-    font-family: Roboto;
+/* CONFIGURACION GENERAL */
+
+
+/* Fuente */
+* {
+  font-family: Roboto;
+  box-sizing: border-box;
+}
+
+/* Tamaño por defecto imagenes */
+
+
+/* Tamaño de fuentes */
+h3{
+  font-size: 24px;
+}
+h4, article span{
+  font-size: 18px;
+  margin: 0;
+}
+section article p{
+  font-size: 16px;
+}
+p, nav li{
+  font-size: 12px;
+}
+
+body {
+  margin: 0;
+  background-color: #ebebeb;
+}
+
+
+/* HEADER */
+
+header {
+  background-color: #eac926;
+}
+
+.busqueda {
+  padding: 20px;
+}
+
+/* Logo mercadoliebre*/
+header img {
+  width: 35%;
+  margin: 10px;
+}
+
+/* Barra de busqueda */
+.barra-busqueda {
+  background-color: white;
+  color: #666;
+  border: #666 1px solid;
+  margin-right: 3px;
+}
+
+/* Icono de busqueda */
+.icono-busqueda {
+  background-color: #ebebeb;
+  border: #666 1px solid;
+}
+
+/* Links */
+nav {
+  display: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  list-style: none;
+}
+
+/* Titulo central */
+header p {
+  text-align: center;
+}
+
+/* Contenedor hamburguesa */
+.burger-menu {
+  text-align: center;
+}
+
+/* Menu hamburguesa */
+.fa-bars {
+  background-color: #1259c3;
+  color: white;
+  font-size: 5vw;
+  text-align: center;
+  width: 10%;
+  height: 10%;
+  border-radius: 20%;
+  border: 5px #1259c3 solid;
+  margin-bottom: 10px;
+  padding: 1% 0;
+}
+
+
+/* MAIN */
+
+main {
+  margin: auto;
+  width: 90%;
+}
+
+main img {
+  width: 100%;
+  margin: 0;
+  padding: 0;;
+}
+
+main section article {
+  margin: 10px 0;
+}
+
+main div {
+  border-top: 1px solid #ebebeb;
+  padding: 15px;
+  background-color: white;
+}
+
+main div i {
+  margin: 0;
+  border-radius: 50%;
+  border: 1px solid  #39b54a;
+  font-size: 18px;
+  padding: 5px;
+  color:  #39b54a;
+}
+
+main div p {
+  margin: 0;
+  color:  #39b54a;
+}
+
+main div h4 {
+  font-weight: normal;
+  font-size: 16px;
+  display: none;
+}
+
+
+
+
+/* FOOTER */
+footer{
+  text-align: center;
+}
+
+/* Secciones en general */
+footer section {
+  margin: 0px 40px;
+}
+
+/* Iconos dentro de las secciones */
+section i{
+  color: #1259c3;
+  font-size: 2em;
+  margin-top: 50px;;
+  margin-bottom: 10px;
+}
+
+/* Pie de pagina */
+.copyright {
+  text-align: start;
+  color: #666;
+  margin: 50px 0 0;
+}
+
+footer section p {
+  font-size: 14px;
+  margin: 0 20px;
+}
+
+
+
+
+/* BREAKPOINTS */
+
+
+/* Navegacion para tables */
+@media (min-width: 361px){
+  /* Descripcion de los productos */
+  main div h4 {
+    display:block;
+    margin-top: 20px;
+  }
+
+  /* Sombra en los bordes de los articulos */
+  main article {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+
+  nav {
+    display: block;
+    padding-left: 2%;
+  }
+
+  .burger-menu {
+    display: none;
+  }
+
+}
+
+
+
+
+
+/* Navegacion para desktop */
+@media (min-width: 769px) {
+  /* Descripcion de los productos */
+  main div h4 {
+    display:block;
+    margin-top: 20px;
+  }
+
+  /* Sombra en los bordes de los articulos */
+  main article {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+
 }
