@@ -20,34 +20,41 @@ Descripciones: 16px
 /* CONFIGURACION GENERAL */
 
 
-/* Fuente */
+/* Para todo */
 * {
+  margin: 0;
+  padding: 0;
   font-family: Roboto;
   box-sizing: border-box;
 }
 
-/* Tamaño por defecto imagenes */
 
 
 /* Tamaño de fuentes */
-h3{
+
+/* Titulos */
+h3 {
   font-size: 24px;
 }
-h4, article span{
+
+/* Precios y descripciones */
+h4,
+.producto span {
   font-size: 18px;
   margin: 0;
 }
-section article p{
+
+/* Descuentos */
+.producto p {
   font-size: 16px;
 }
-p, nav li{
-  font-size: 12px;
-}
 
+/* Color de fondo del body */
 body {
-  margin: 0;
   background-color: #ebebeb;
 }
+
+
 
 
 /* HEADER */
@@ -56,49 +63,57 @@ header {
   background-color: #eac926;
 }
 
-.busqueda {
-  padding: 20px;
+/* Contenedor del header posicionado arriba */
+.header-div-arriba {
+  padding: 10px 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* Logo mercadoliebre*/
-header img {
-  width: 35%;
-  margin: 10px;
+.logo-mercado-liebre {
+  width: 49%;
 }
 
 /* Barra de busqueda */
 .barra-busqueda {
   background-color: white;
   color: #666;
-  border: #666 1px solid;
-  margin-right: 3px;
+  padding: 7px 4px;
+  border-radius: 8px;
+  width: 49%;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* Icono de busqueda */
-.icono-busqueda {
-  background-color: #ebebeb;
-  border: #666 1px solid;
+
+/* Frase */
+.frase {
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
+  font-size: 12px;
 }
 
-/* Links */
-nav {
+/* Links de navegacion */
+.barra-navegacion {
   display: none;
 }
-
-nav a {
+.barra-navegacion a {
   text-decoration: none;
   color: black;
   list-style: none;
 }
 
-/* Titulo central */
-header p {
-  text-align: center;
-}
 
-/* Contenedor hamburguesa */
+/* Contenedor del menu hamburguesa */
 .burger-menu {
   text-align: center;
+  padding-bottom: 5px;
 }
 
 /* Menu hamburguesa */
@@ -116,6 +131,15 @@ header p {
   padding: 1% 0;
 }
 
+/* Imagen del banner */
+.banner-mercado-liebre{ 
+  width: 100%;
+  display: flex;
+  align-self: flex-end;
+}
+
+
+
 
 /* MAIN */
 
@@ -124,62 +148,90 @@ main {
   width: 90%;
 }
 
-main img {
+/* Titulos */
+.main-titulo {
+  color: #666;
+  padding: 15px 0;
   width: 100%;
-  margin: 0;
-  padding: 0;;
 }
 
-main section article {
+/* Contenedor de los productos */
+.producto {
   margin: 10px 0;
   display: flex;
   flex-direction: column;
 }
 
-main div {
+/* Imagenes de los productos */
+.producto img{
+  width: 100%;
+}
+
+/* Contenedor donde se encuentra precio, descuento, icono del camion y descripcion */
+.contenedor-descripcion-producto  {
+  position: relative;
+  display: flex;
   border-top: 1px solid #ebebeb;
   padding: 15px;
   background-color: white;
+  flex-wrap: wrap;
 }
 
-main div i {
+/* Precio y descuento, respectivamente */
+.producto span {
+  width: 30%;
+}
+.producto p {
+  color: #39b54a;
+  width: 70%;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+
+/* Icono del camion */
+.contenedor-descripcion-producto> .icono-delivery {
   margin: 0;
-  border-radius: 50%;
-  border: 1px solid  #39b54a;
-  font-size: 18px;
+  color: #39b54a;
+  display: block;
+  font-size: 16px;
   padding: 5px;
-  color:  #39b54a;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #39b54a;
+  background-color: #FFF;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: -15px;
 }
 
-main div p {
-  margin: 0;
-  color:  #39b54a;
-}
-
-main div h4 {
+/* Descripcion del producto */
+.descripcion {
   font-weight: normal;
   font-size: 16px;
   display: none;
+  color: #666;
 }
 
 
 
 
 /* FOOTER */
-footer{
+footer {
   text-align: center;
 }
 
 /* Secciones en general */
-footer section {
+.footer-section {
   margin: 0px 40px;
 }
 
 /* Iconos dentro de las secciones */
-section i{
+.footer-icono {
   color: #1259c3;
   font-size: 2em;
-  margin-top: 50px;;
+  margin-top: 50px;
   margin-bottom: 10px;
 }
 
@@ -187,10 +239,12 @@ section i{
 .copyright {
   text-align: start;
   color: #666;
-  margin: 50px 0 0;
+  padding: 50px 20px 20px;
+  font-size: 12px;
 }
 
-footer section p {
+/* Textos o descripciones dentro de cada seccion */
+.footer-section p {
   font-size: 14px;
   margin: 0 20px;
 }
@@ -198,30 +252,103 @@ footer section p {
 
 
 
+
+
 /* BREAKPOINTS */
 
 
-/* Navegacion para tables */
-@media (min-width: 361px){
-  /* Descripcion de los productos */
-  main div h4 {
-    display:block;
-    margin-top: 20px;
+/* Navegacion para tablets */
+@media (min-width: 361px) {
+
+  /* Se convierte en responsive las secciones de los productos, para que uno vaya debajo del otro */
+  .main-section-ultimaVisita, .main-section-ofertas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 
-  /* Sombra en los bordes de los articulos */
-  main article {
+  /* Sombra en los bordes de los articulos y muestra dos articulos por linea*/
+  .producto {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    width: 48%;
   }
 
-  nav {
+  /* Propiedades para ajustar el precio, oferta y descripcion respectivamente */
+  .producto span{
+    font-size: 0.55rem;
+    display: flex;
+    align-items: center;
+  }
+  .producto p{
+    font-size: 0.50rem;
+    display: flex;
+    align-items: center;
+    padding-bottom: 1px;
+  }
+  .descripcion {
     display: block;
+    margin-top: 10px;
+    font-size: 0.55rem;
   }
 
+  /* Pone visible la barra de navegacion */
+  .barra-navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0 0;
+    font-size: 12px;
+  }
+
+  /* Estilo de las listas de la barra de navegacion */
+  .lista-izquierda, .lista-derecha{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 2px 0;
+  }
+
+  /* Deja de mostrar el menu de hamburguesa */
   .burger-menu {
     display: none;
   }
 
+}
+
+@media (min-width: 500px) {
+
+  /* Acomoda el div superior del header */
+  .logo-mercado-liebre, .barra-busqueda, .frase {
+    width: 30%;
+  }
+  .frase{
+    padding: 0;
+  }
+
+  /* Tamaño del precio, oferta y descripcion respectivamente */
+  .producto span{
+    font-size: 0.8rem;
+  }
+  .producto p{
+    font-size: 0.75rem;
+  }
+  .descripcion {
+    font-size: 0.8rem;
+  }
+
+  /* Estilo para la barra de navegacion */
+  .lista-izquierda{
+    justify-content: flex-start;
+    width: 50%;
+    padding-left: 5px;
+  }
+  .lista-derecha{
+    justify-content: flex-end;
+    width: 50%;
+    padding-right: 5px;
+  }
+  li{
+    padding: 0 2px;
+  }
 }
 
 
@@ -230,23 +357,69 @@ footer section p {
 
 /* Navegacion para desktop */
 @media (min-width: 769px) {
-  /* Descripcion de los productos */
-  main div h4 {
-    display:block;
-    margin-top: 20px;
+
+  /* Muestra 4 articulos por linea */
+  .producto {
+    width: 24%;
   }
 
-  /* Sombra en los bordes de los articulos */
-  main article {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  /* Tamaño del precio, oferta y descripcion respectivamente */
+  .producto span{
+    font-size: 0.6rem;
+  }
+  .producto p{
+    font-size: 0.55rem;
+  }
+  .descripcion {
+    font-size: 0.6rem;
   }
 
-  nav {
-    display: block;
+  /* Estilo para la barra de navegacion */
+  .lista-izquierda{
+    padding-left: 30px;
+  }
+  .lista-derecha{
+    padding-right: 30px;
+  }
+  li {
+    padding: 0 10px;
+  }
+}
+
+
+
+
+
+@media (min-width: 950px) {
+
+  /* Tamaño del precio, oferta y descripcion respectivamente */
+  .producto span{
+    font-size: 0.8rem;
+  }
+  .producto p{
+    font-size: 0.75rem;
+  }
+  .descripcion {
+    font-size: 0.8rem;
   }
 
-  .burger-menu {
-    display: none;
+}
+
+
+
+
+
+@media (min-width: 1200px) {
+
+  /* Tamaño del precio, oferta y descripcion respectivamente */
+  .producto span{
+    font-size: 1rem;
+  }
+  .producto p{
+    font-size: 0.9rem;
+  }
+  .descripcion {
+    font-size: 1rem;
   }
 
 }
