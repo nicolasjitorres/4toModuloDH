@@ -40,7 +40,7 @@ h3 {
 /* Precios y descripciones */
 h4,
 .producto span {
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -162,6 +162,7 @@ main {
   margin: 10px 0;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 /* Imagenes de los productos */
@@ -213,8 +214,8 @@ main {
 .descripcion {
   font-weight: normal;
   font-size: 16px;
-  display: none;
   color: #666;
+  opacity: 0;
 }
 
 
@@ -249,8 +250,72 @@ footer {
 
 /* Textos o descripciones dentro de cada seccion */
 .footer-section p {
-  font-size: 14px;
+  font-size: 12px;
   margin: 0 20px;
+}
+
+
+
+
+/* ANIMACIONES Y TRANSICIONES */
+
+.producto:hover {
+  box-shadow: 0px 0px 20px rgb(100, 100, 100);
+  z-index: 1;
+  transform: scale(1.1);
+}
+
+.producto:hover .descripcion {
+  opacity: 1;
+}
+
+.producto {
+  position: relative;
+  transition: 500ms;
+  z-index: 0;
+}
+
+.producto .descripcion {
+  transition: all 500ms;
+}
+
+.icono-delivery:hover {
+  animation: rotacion-carrito 500ms ease-in-out infinite alternate;
+}
+
+.footer-icono:hover {
+  color: #0022AA;
+}
+
+.footer-icono{
+  transition: all 500ms;
+}
+
+
+@keyframes rotacion-carrito {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  20% {
+    transform: rotate(-18deg)
+  }
+
+  40% {
+    transform: rotate(-36deg)
+  }
+
+  60% {
+    transform: rotate(-54deg)
+  }
+
+  80% {
+    transform: rotate(-72deg)
+  }
+
+  100% {
+    transform: rotate(-90deg)
+  }
 }
 
 
@@ -274,7 +339,6 @@ footer {
 
   /* Sombra en los bordes de los articulos y muestra dos articulos por linea*/
   .producto {
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
     width: 48%;
   }
 
@@ -293,7 +357,6 @@ footer {
   }
 
   .descripcion {
-    display: block;
     margin-top: 10px;
     font-size: 0.55rem;
   }
@@ -407,6 +470,23 @@ footer {
   li {
     padding: 0 10px;
   }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .footer-section {
+    width: 33%;
+    margin: 0;
+    padding: 0 40px;
+  }
+
+  .footer-section p {
+    margin: 0;
+  }
+
 }
 
 

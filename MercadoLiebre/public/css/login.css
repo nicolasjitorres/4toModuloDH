@@ -228,6 +228,28 @@ footer {
 
 
 
+/* ANIMACIONES Y TRANSICIONES */
+
+.boton-enviar:hover {
+  background-color: #0022AA;
+}
+
+.boton-enviar {
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.footer-icono:hover {
+  color: #0022AA;
+}
+
+.footer-icono{
+  transition: all 500ms;
+}
+
+
+
+
 
 /* BREAKPOINTS */
 
@@ -316,6 +338,22 @@ footer {
 
   li {
     padding: 0 10px;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .footer-section {
+    width: 33%;
+    margin: 0;
+    padding: 0 40px;
+  }
+
+  .footer-section p {
+    margin: 0;
   }
 }
 
