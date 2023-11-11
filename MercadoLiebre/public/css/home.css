@@ -103,6 +103,7 @@ header {
 .barra-navegacion {
   display: none;
 }
+
 .barra-navegacion a {
   text-decoration: none;
   color: black;
@@ -132,7 +133,7 @@ header {
 }
 
 /* Imagen del banner */
-.banner-mercado-liebre{ 
+.banner-mercado-liebre {
   width: 100%;
   display: flex;
   align-self: flex-end;
@@ -146,6 +147,7 @@ header {
 main {
   margin: auto;
   width: 90%;
+  padding: 40px 0 80px;
 }
 
 /* Titulos */
@@ -163,12 +165,12 @@ main {
 }
 
 /* Imagenes de los productos */
-.producto img{
+.producto img {
   width: 100%;
 }
 
 /* Contenedor donde se encuentra precio, descuento, icono del camion y descripcion */
-.contenedor-descripcion-producto  {
+.contenedor-descripcion-producto {
   position: relative;
   display: flex;
   border-top: 1px solid #ebebeb;
@@ -181,6 +183,7 @@ main {
 .producto span {
   width: 30%;
 }
+
 .producto p {
   color: #39b54a;
   width: 70%;
@@ -190,7 +193,7 @@ main {
 }
 
 /* Icono del camion */
-.contenedor-descripcion-producto> .icono-delivery {
+.contenedor-descripcion-producto>.icono-delivery {
   margin: 0;
   color: #39b54a;
   display: block;
@@ -220,6 +223,7 @@ main {
 /* FOOTER */
 footer {
   text-align: center;
+  background-color: white;
 }
 
 /* Secciones en general */
@@ -261,7 +265,8 @@ footer {
 @media (min-width: 361px) {
 
   /* Se convierte en responsive las secciones de los productos, para que uno vaya debajo del otro */
-  .main-section-ultimaVisita, .main-section-ofertas {
+  .main-section-ultimaVisita,
+  .main-section-ofertas {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -274,17 +279,19 @@ footer {
   }
 
   /* Propiedades para ajustar el precio, oferta y descripcion respectivamente */
-  .producto span{
+  .producto span {
     font-size: 0.55rem;
     display: flex;
     align-items: center;
   }
-  .producto p{
+
+  .producto p {
     font-size: 0.50rem;
     display: flex;
     align-items: center;
     padding-bottom: 1px;
   }
+
   .descripcion {
     display: block;
     margin-top: 10px;
@@ -300,7 +307,8 @@ footer {
   }
 
   /* Estilo de las listas de la barra de navegacion */
-  .lista-izquierda, .lista-derecha{
+  .lista-izquierda,
+  .lista-derecha {
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -317,36 +325,47 @@ footer {
 @media (min-width: 500px) {
 
   /* Acomoda el div superior del header */
-  .logo-mercado-liebre, .barra-busqueda, .frase {
+  .logo-mercado-liebre,
+  .barra-busqueda,
+  .frase {
     width: 30%;
   }
-  .frase{
+
+  .frase {
     padding: 0;
   }
 
   /* Tamaño del precio, oferta y descripcion respectivamente */
-  .producto span{
+  .producto span {
     font-size: 0.8rem;
   }
-  .producto p{
+
+  .producto p {
     font-size: 0.75rem;
   }
+
   .descripcion {
     font-size: 0.8rem;
   }
 
+  .lista-derecha {
+    font-size: 11.7px;
+  }
+
   /* Estilo para la barra de navegacion */
-  .lista-izquierda{
+  .lista-izquierda {
     justify-content: flex-start;
     width: 50%;
     padding-left: 5px;
   }
-  .lista-derecha{
+
+  .lista-derecha {
     justify-content: flex-end;
     width: 50%;
     padding-right: 5px;
   }
-  li{
+
+  li {
     padding: 0 2px;
   }
 }
@@ -364,23 +383,27 @@ footer {
   }
 
   /* Tamaño del precio, oferta y descripcion respectivamente */
-  .producto span{
+  .producto span {
     font-size: 0.6rem;
   }
-  .producto p{
+
+  .producto p {
     font-size: 0.55rem;
   }
+
   .descripcion {
     font-size: 0.6rem;
   }
 
   /* Estilo para la barra de navegacion */
-  .lista-izquierda{
+  .lista-izquierda {
     padding-left: 30px;
   }
-  .lista-derecha{
+
+  .lista-derecha {
     padding-right: 30px;
   }
+
   li {
     padding: 0 10px;
   }
@@ -388,36 +411,17 @@ footer {
 
 
 
-
-
-@media (min-width: 950px) {
+@media (min-width: 1100px) {
 
   /* Tamaño del precio, oferta y descripcion respectivamente */
-  .producto span{
-    font-size: 0.8rem;
-  }
-  .producto p{
-    font-size: 0.75rem;
-  }
-  .descripcion {
-    font-size: 0.8rem;
+  .producto span {
+    font-size: 0.94rem;
   }
 
-}
-
-
-
-
-
-@media (min-width: 1200px) {
-
-  /* Tamaño del precio, oferta y descripcion respectivamente */
-  .producto span{
-    font-size: 1rem;
-  }
-  .producto p{
+  .producto p {
     font-size: 0.9rem;
   }
+
   .descripcion {
     font-size: 1rem;
   }
