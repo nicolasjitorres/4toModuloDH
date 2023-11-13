@@ -77,17 +77,31 @@ header {
   width: 49%;
 }
 
+/* Contenedor de barra de busqueda e icono */
+.barra-busqueda-icono {
+  position: relative;
+  width: 49%;
+}
+
 /* Barra de busqueda */
 .barra-busqueda {
   background-color: white;
   color: #666;
-  padding: 7px 4px;
-  border-radius: 8px;
-  width: 49%;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
   font-size: 0.7rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding-right: 30px;
+}
+
+
+.icono-busqueda {
+  position: absolute;
+  right: 10px; 
+  top: 25%;
+  color: #666;
 }
 
 
@@ -271,7 +285,7 @@ footer {
 
 .producto {
   position: relative;
-  transition: 500ms;
+  transition: all 500ms;
   z-index: 0;
 }
 
@@ -287,7 +301,7 @@ footer {
   color: #0022AA;
 }
 
-.footer-icono{
+.footer-icono {
   transition: all 500ms;
 }
 
@@ -389,9 +403,14 @@ footer {
 
   /* Acomoda el div superior del header */
   .logo-mercado-liebre,
-  .barra-busqueda,
+  .barra-busqueda-icono,
   .frase {
     width: 30%;
+    font-size: 14px;
+  }
+
+  .barra-busqueda{
+    font-size: 14px;
   }
 
   .frase {

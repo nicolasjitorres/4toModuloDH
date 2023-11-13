@@ -40,7 +40,7 @@ h3 {
 /* Precios y descripciones */
 h4,
 .producto span {
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -220,7 +220,7 @@ footer {
 
 /* Textos o descripciones dentro de cada seccion */
 .footer-section p {
-  font-size: 14px;
+  font-size: 12px;
   margin: 0 20px;
 }
 
